@@ -53,6 +53,7 @@ app.all("*", (req, res) => {
   res.status(404).json({ message: "Page not found" });
 });
 
-app.listen(3000, () => {
-  console.log("TripAdvisor backend running 🤓");
+
+app.listen(process.env.PORT, (err, res) => {
+  console.log("TripAdvisor backend running in port:" + process.env.PORT);
 });
